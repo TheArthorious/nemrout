@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nemrout/pages/core/home_page.dart';
+
+import 'constants/constants.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,14 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+      home: const Scaffold(
+        body: SafeArea(child: HomePage()),
       ),
     );
   }
